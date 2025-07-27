@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Wyre Innovations',
-  description: 'Leading manufacturer of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions for clean energy storage.',
+  description: 'Leading OEM provider of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions for clean energy storage.',
   
   // SEO and meta configuration
   head: [
@@ -13,19 +13,19 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
     
     // SEO Keywords
-    ['meta', { name: 'keywords', content: 'sine wave inverter, solar inverter, MPPT controller, Li-ion BMS, Wyre Innovations, battery management system, clean energy products, solar energy India, energy storage solutions' }],
+    ['meta', { name: 'keywords', content: 'sine wave inverter, solar inverter, MPPT controller, Li-ion BMS, Wyre Innovations, battery management system, clean energy products, solar energy India, energy storage solutions, OEM provider' }],
     ['meta', { name: 'author', content: 'Wyre Innovations' }],
     
     // Open Graph
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Wyre Innovations - Clean Energy Solutions' }],
-    ['meta', { property: 'og:description', content: 'Leading manufacturer of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions.' }],
+    ['meta', { property: 'og:description', content: 'Leading OEM provider of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions.' }],
     ['meta', { property: 'og:site_name', content: 'Wyre Innovations' }],
     
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Wyre Innovations - Clean Energy Solutions' }],
-    ['meta', { name: 'twitter:description', content: 'Leading manufacturer of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions.' }],
+    ['meta', { name: 'twitter:description', content: 'Leading OEM provider of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions.' }],
     
     // Fonts
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -37,7 +37,7 @@ export default defineConfig({
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Wyre Innovations",
-      "description": "Leading manufacturer of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions for clean energy storage.",
+      "description": "Leading OEM provider of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions for clean energy storage.",
       "url": "https://wyre-innovations.github.io",
       "logo": "https://wyre-innovations.github.io/logo.png",
       "contactPoint": {
