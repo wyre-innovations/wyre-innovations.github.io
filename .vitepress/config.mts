@@ -16,6 +16,9 @@ export default defineConfig({
     ['meta', { name: 'keywords', content: 'sine wave inverter, solar inverter, MPPT controller, Li-ion BMS, Wyre Innovations, battery management system, clean energy products, solar energy India, energy storage solutions, OEM provider' }],
     ['meta', { name: 'author', content: 'Wyre Innovations' }],
     
+    // Google Site Verification
+    ['meta', { name: 'google-site-verification', content: 'M3vxZblk4YyJzovJ04ghIyGNmC3mTEijTZYGKhUj7bQ' }],
+    
     // Open Graph
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Wyre Innovations - Clean Energy Solutions' }],
