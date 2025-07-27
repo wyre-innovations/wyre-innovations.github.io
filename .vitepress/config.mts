@@ -20,12 +20,20 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Wyre Innovations - Clean Energy Solutions' }],
     ['meta', { property: 'og:description', content: 'Leading OEM provider of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions.' }],
+    ['meta', { property: 'og:image', content: 'https://wyre-innovations.github.io/logo.png' }],
+    ['meta', { property: 'og:image:alt', content: 'Wyre Innovations Logo' }],
     ['meta', { property: 'og:site_name', content: 'Wyre Innovations' }],
     
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Wyre Innovations - Clean Energy Solutions' }],
     ['meta', { name: 'twitter:description', content: 'Leading OEM provider of sine wave inverters, solar inverters, MPPT controllers, and Li-ion BMS solutions.' }],
+    ['meta', { name: 'twitter:image', content: 'https://wyre-innovations.github.io/logo.png' }],
+    ['meta', { name: 'twitter:image:alt', content: 'Wyre Innovations Logo' }],
+    
+    // Favicon and Icons
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/logo.png' }],
     
     // Fonts
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
