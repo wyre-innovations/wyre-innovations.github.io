@@ -1,0 +1,30 @@
+{
+  "name": "wyre-innovations-website",
+  "version": "1.0.0",
+  "description": "Official website for Wyre Innovations - Clean energy products and solutions",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [
+    "sine wave inverter",
+    "solar inverter", 
+    "MPPT controller",
+    "Li-ion BMS",
+    "battery management system",
+    "clean energy products",
+    "solar energy India",
+    "energy storage solutions"
+  ],
+  "author": "Wyre Innovations",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wyre-innovations/wyre-innovations.github.io.git"
+  },
+  "homepage": "https://wyre-innovations.github.io"
+} 

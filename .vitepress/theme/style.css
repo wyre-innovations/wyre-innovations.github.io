@@ -1,0 +1,383 @@
+/**
+ * Custom styles for Wyre Innovations
+ * Apple-inspired minimalist design with clean typography
+ */
+
+/* Import Lovelo font from Google Fonts alternative or local fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+  /* Apple-inspired color palette */
+  --vp-c-white: #ffffff;
+  --vp-c-black: #000000;
+  --vp-c-gray-1: #f6f6f7;
+  --vp-c-gray-2: #e8e8ed;
+  --vp-c-gray-3: #d1d1d6;
+  --vp-c-gray-4: #8e8e93;
+  --vp-c-gray-5: #636366;
+  --vp-c-gray-6: #48484a;
+  --vp-c-gray-7: #3a3a3c;
+  --vp-c-gray-8: #2c2c2e;
+  --vp-c-gray-9: #1c1c1e;
+  
+  /* Brand colors */
+  --vp-c-brand: #007aff;
+  --vp-c-brand-light: #5ac8fa;
+  --vp-c-brand-lighter: #64d2ff;
+  --vp-c-brand-dark: #0056b3;
+  --vp-c-brand-darker: #003d82;
+  
+  /* Background colors */
+  --vp-c-bg: var(--vp-c-white);
+  --vp-c-bg-alt: var(--vp-c-gray-1);
+  --vp-c-bg-soft: var(--vp-c-gray-1);
+  --vp-c-bg-mute: var(--vp-c-gray-2);
+  
+  /* Text colors */
+  --vp-c-text-1: var(--vp-c-black);
+  --vp-c-text-2: var(--vp-c-gray-6);
+  --vp-c-text-3: var(--vp-c-gray-4);
+  
+  /* Border colors */
+  --vp-c-border: var(--vp-c-gray-3);
+  --vp-c-gutter: var(--vp-c-gray-2);
+  
+  /* Typography */
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --vp-font-family-mono: 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
+  /* Layout */
+  --vp-layout-max-width: 1440px;
+  --vp-nav-height: 64px;
+  --vp-sidebar-width: 272px;
+  
+  /* Border radius for Apple-style rounded corners */
+  --vp-border-radius: 12px;
+  --vp-border-radius-small: 8px;
+  --vp-border-radius-large: 16px;
+  
+  /* Shadows */
+  --vp-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --vp-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --vp-shadow-3: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --vp-shadow-4: 0 16px 40px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --vp-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark theme colors */
+.dark {
+  --vp-c-bg: var(--vp-c-black);
+  --vp-c-bg-alt: var(--vp-c-gray-9);
+  --vp-c-bg-soft: var(--vp-c-gray-8);
+  --vp-c-bg-mute: var(--vp-c-gray-7);
+  
+  --vp-c-text-1: var(--vp-c-white);
+  --vp-c-text-2: var(--vp-c-gray-3);
+  --vp-c-text-3: var(--vp-c-gray-4);
+  
+  --vp-c-border: var(--vp-c-gray-7);
+  --vp-c-gutter: var(--vp-c-gray-8);
+  
+  --vp-c-brand: var(--vp-c-brand-light);
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  transition: var(--vp-transition);
+}
+
+/* Custom navigation styles */
+.VPNav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: none !important; /* Remove separator */
+}
+
+.dark .VPNav {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure nav border is completely removed */
+.VPNav::after {
+  display: none !important;
+}
+
+.VPNav .container {
+  border-bottom: none !important;
+}
+
+/* Hide hamburger menu - we'll use regular nav on mobile with icons */
+.VPNavBarHamburger {
+  display: none !important;
+}
+
+/* Always show navigation menu items */
+.VPNavBarMenu {
+  display: flex !important;
+}
+
+/* Mobile navigation styling - show icons instead of text */
+@media (max-width: 768px) {
+  .VPNavBarMenuLink .text {
+    display: none;
+  }
+  
+  .VPNavBarMenuLink .link {
+    padding: 0.5rem !important;
+    min-width: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Add icons using pseudo-elements */
+  .VPNavBarMenuLink .link::before {
+    content: '';
+    display: block;
+    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+  }
+  
+  /* Home icon */
+  .VPNavBarMenuLink .link[href="/"]::before {
+    content: '🏠';
+  }
+  
+  /* Products icon */
+  .VPNavBarMenuLink .link[href="/products"]::before {
+    content: '📦';
+  }
+  
+  /* Contact icon */
+  .VPNavBarMenuLink .link[href="/contact"]::before {
+    content: '📞';
+  }
+}
+
+.VPNavBar {
+  padding: 0 32px;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Custom button styles */
+.VPButton {
+  border-radius: var(--vp-border-radius-small);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: var(--vp-transition);
+}
+
+.VPButton:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--vp-shadow-2);
+}
+
+/* Content area improvements */
+.VPContent {
+  padding-top: 0;
+}
+
+.vp-doc {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  transition: var(--vp-transition);
+}
+
+a:hover {
+  color: var(--vp-c-brand-dark);
+  text-decoration: underline;
+}
+
+/* Custom footer */
+.VPFooter {
+  background-color: var(--vp-c-bg);
+  border-top: none !important; /* Remove separator */
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* Ensure footer border is completely removed */
+.VPFooter::before {
+  display: none !important;
+}
+
+.VPFooter .container {
+  border-top: none !important;
+}
+
+/* Home page hero customizations */
+.VPHome .VPHero {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Home layout full height minus nav and footer */
+.Layout.VPHome {
+  min-height: calc(100vh - var(--vp-nav-height) - 4rem); /* 4rem = footer padding estimate */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.Layout.VPHome .VPContent {
+  padding: 0 !important;
+  width: 100%;
+}
+
+/* Remove unnecessary fixed body styles */
+body:has(.Layout.VPHome),
+html:has(.Layout.VPHome) {
+  overflow: auto !important;
+  height: auto !important;
+  position: static !important;
+}
+
+/* Custom cards and components */
+.custom-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--vp-border-radius);
+  padding: 1.5rem;
+  transition: var(--vp-transition);
+  box-shadow: var(--vp-shadow-1);
+}
+
+.custom-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--vp-shadow-3);
+  border-color: var(--vp-c-brand);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .VPNavBar {
+    padding: 0 16px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .vp-doc {
+    padding: 0 16px;
+  }
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--vp-c-brand);
+  outline-offset: 2px;
+  border-radius: var(--vp-border-radius-small);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-mute);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}
+
+/* Print styles */
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPFooter {
+    display: none !important;
+  }
+  
+  .VPContent {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+} 
