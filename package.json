@@ -1,0 +1,54 @@
+{
+  "name": "wyre-innovations-website",
+  "version": "1.0.0",
+  "description": "Official website for Wyre Innovations - Clean Energy Solutions",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "deploy": "npm run export && touch out/.nojekyll"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next-themes": "^0.2.1",
+    "lucide-react": "^0.294.0",
+    "framer-motion": "^10.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.0",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "sine wave inverter",
+    "solar inverter",
+    "MPPT controller",
+    "Li-ion BMS",
+    "Wyre Innovations",
+    "battery management system",
+    "clean energy products",
+    "solar energy India",
+    "energy storage solutions",
+    "OEM provider"
+  ],
+  "author": "Wyre Innovations",
+  "license": "MIT",
+  "homepage": "https://wyre-innovations.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wyre-innovations/wyre-innovations.github.io.git"
+  }
+}
