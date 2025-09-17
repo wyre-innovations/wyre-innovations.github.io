@@ -147,6 +147,14 @@ export function Footer() {
               >
                 LinkedIn
               </Link>
+              <Link
+                href="https://theorg.com/org/wyre-innovations"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary-700 transition-colors duration-200 text-sm"
+              >
+                The Org
+              </Link>
             </div>
           </div>
         </div>
